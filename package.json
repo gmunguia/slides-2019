@@ -1,0 +1,14 @@
+{
+  "name": "mdx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Gerardo Munguia <gerardomunguiahoyo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx"
+  },
+  "dependencies": {
+    "mdx-deck": "^2.2.1"
+  }
+}
