@@ -6,9 +6,11 @@
   "license": "MIT",
   "scripts": {
     "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx"
+    "build": "./build.js | xargs -P 4 -I % mdx-deck build %/deck.mdx --out-dir dist/%"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "globby": "^9.2.0",
     "mdx-deck": "^2.2.1"
   }
 }
