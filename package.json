@@ -5,12 +5,28 @@
   "author": "Gerardo Munguia <gerardomunguiahoyo@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
+    "start": "mdx-deck",
     "build": "./build.js | xargs -P 4 -I % mdx-deck build %/deck.mdx --out-dir dist/%"
   },
-  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,yml,mdx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "react-syntax-highlighter": "^10.2.1",
+    "rebass": "^3.1.0",
+    "styled-components": "^4.2.0"
+  },
   "devDependencies": {
     "globby": "^9.2.0",
-    "mdx-deck": "^2.2.1"
+    "mdx-deck": "^2.2.1",
+    "prettier": "^1.17.0"
   }
 }
