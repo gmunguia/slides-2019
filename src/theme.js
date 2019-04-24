@@ -27,11 +27,11 @@ export default syntaxHighlighterPrism({
   },
   weights: 400,
   li: {
-    paddingBottom: "20px",
+    paddingBottom: "0.5em",
     fontFamily: '"Dank Mono", monospace'
   },
   ul: {
-    paddingLeft: "20px",
+    paddingLeft: "0.5em",
     display: "inline-block"
   },
   colors
